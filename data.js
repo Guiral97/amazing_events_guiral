@@ -1,4 +1,5 @@
-events = [
+let currentDate = "2022-01-01"
+let events = [
   {
     _id: 1,
     "image":"https://amazingeventsapi.herokuapp.com/api/img/Feriadecomidas7.jpg",
