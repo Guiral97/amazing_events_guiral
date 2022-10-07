@@ -3,7 +3,6 @@ const cont_card = document.getElementById('cont_card')
 pushEvent(events,cont_card)
 
 
-
 function pushEvent(events,container){
     for(let event of events){ 
             container.innerHTML += `

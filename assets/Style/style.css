@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+#active{
+    background-color: #da4681;
+    color: white;
+}
+
 .header {
     width: 100%;
     min-height: 20vh;
