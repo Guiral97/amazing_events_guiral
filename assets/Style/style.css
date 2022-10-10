@@ -13,7 +13,9 @@
     background-color: #CBD6E8;
     border-bottom: solid 2px #909599;
 }
-
+.header h1 {
+    text-align: center;
+}
 .main {
     min-height: 70vh;
     background-color:  #E9F0FA
