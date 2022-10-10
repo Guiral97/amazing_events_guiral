@@ -3,8 +3,7 @@
 }
 
 #active{
-    background-color: #da4681;
-    color: white;
+    border-bottom: 5px solid #da4681;
 }
 
 .header {
@@ -16,6 +15,11 @@
 .header h1 {
     text-align: center;
 }
+
+.active:hover{
+    border-bottom: 5px solid #da4681;
+}
+
 .main {
     min-height: 70vh;
     background-color:  #E9F0FA
