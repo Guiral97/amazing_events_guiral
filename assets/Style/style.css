@@ -81,12 +81,22 @@
     border-top: solid 2px #909599;
 }
 
+
 .footer .contain_boton {
     gap: 2rem;
     display: flex;
-    width: 50%;
+    width: 33%;
     height: 100%;
     padding-left: 1rem;
+}
+
+.footer .text{
+    padding-right: 1rem;
+    width: 33%;
+}
+
+.footer .text h2{
+    font-size: large;
 }
 
 .footer .contain_boton .boton {
@@ -113,13 +123,25 @@
     }
 }
 
-@media screen and (max-width: 673px) {
+@media screen and (max-width: 765px) {
     .contain_boton{
         justify-content: center;
     }
     .footer {
         align-items: center;
-        gap: 5%;
+        gap: 1rem;
+        padding: 1rem;
         flex-direction: column;
+    }
+    .footer .contain_boton {
+        width: 100%;
+    }
+    
+    .footer .text{
+        width: 100%;
+    }
+
+    #text_2{
+        justify-content: center !important;
     }
 }
