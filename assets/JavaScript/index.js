@@ -1,17 +1,21 @@
 const cont_card = document.getElementById('cont_card')
+const title = document.getElementById('title')
+const todayDate = events.currentDate   
 
-pushEvent(events,cont_card)
 
+const card = [...events.events].map (doEvent => doEvent)
+const allEvents = card.filter(()=> title.text.includes('Home')).forEach(doEvent)
+const pastEvents = card.filter(()=> title.text.includes('Past')).filter ((card) => card.date < todayDate).forEach(doEvent)
+const futureEvents = card.filter(() => title.text.includes('Upcoming')).filter ((card) => card.date > todayDate).forEach(doEvent)
 
-function pushEvent(events,container){
-    for(let event of events){ 
-            container.innerHTML += `
+function doEvent(event){
+        cont_card.innerHTML += `
             <div class="card" style="width: 15rem; height: 24rem;">
                 <img src="${event.image}" style="height: 30%; object-fit: cover; border-radius: 0.3rem 0.3rem 0 0 ;" alt="..." />
                 <div class="card-body" style="height: 70%;">
                     <h5 class="card-title" style="height: 25%;">${event.name}</h5>
                     <p class="card-text" style="height: 50%;">
-                        Let's go to the paleontology museum for an incredible tour to learn about the largest dinosaurs.
+                        ${event.description}
                     </p>
                     <div class="d-flex gap-4 align-items-center" style="width: 100%; height: 20%;">
                         <p class="p-0 m-0"><strong>Price:</strong>${event.price}$</p>
@@ -20,30 +24,4 @@ function pushEvent(events,container){
                 </div>
             </div>
             `
-    }
-}
-// pushEvent(events[0],cont_card)
-
-
-
-
-
-
-
-
-
-            // <div class="card" style="width: 15rem; height: 24rem;">
-            // <img src="${event.image}" style="height: 30%; object-fit: cover; border-radius: 0.3rem 0.3rem 0 0 ;" alt="..." />
-            // <div class="card-body">
-            // <h5 class="card-title">${event.name}</h5>
-            // <p class="card-text">
-            // ${event.description}
-            // </p>
-            // <div class="d-flex gap-2" style="width: 100%;">
-            // <p>Price:${event.price}$</p>
-            // <a href="#" class="btn btn-primary" style="">View More</a>
-            // </div>
-            // </div>
-            // </div>
-
-
+} 
