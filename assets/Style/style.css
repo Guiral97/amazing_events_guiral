@@ -29,6 +29,16 @@
     background-color:  #E9F0FA
 }
 
+.empty{
+    width: 10rem;
+    height: 10rem;
+    background-color: aqua;
+}
+
+/* .checks{
+    background-color: #90959968;
+    border-radius: 1rem;
+} */
 
 .main_details {
     padding: 5%;
@@ -67,6 +77,20 @@
 .main_details .cont_card article {
     padding: 3%;
     width: 20rem;
+}
+
+.cont_df_img {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.cont_df_img p {
+    width: 100%;
+}
+
+.cont_df_img #dont_found_img{
+    width: 100%;
 }
 
 /* FOOTER */
