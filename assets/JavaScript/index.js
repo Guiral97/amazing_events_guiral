@@ -85,7 +85,7 @@ function doEvent(event) {
                                     </p>
                                     <div class="d-flex gap-4 align-items-center" style="width: 100%; height: 20%;">
                                         <p class="p-0 m-0"><strong>Price:</strong>${event.price}$</p>
-                                        <a href="./details.html" class="btn px-1" style=" background-color: #CBD6E8; color:#D00B5B;"><strong>View More</strong></a>
+                                        <a href="./details.html?id=${event._id}" type="submit" class="btn px-1"  style=" background-color: #CBD6E8; color:#D00B5B;"><strong>View More</strong></a>
                                     </div>
                                 </div>
                             </div>`
