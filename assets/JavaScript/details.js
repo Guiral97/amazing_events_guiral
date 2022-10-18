@@ -4,7 +4,7 @@ const contCardDetail = document.getElementById('cont_card_details')
 let allEvents = events.events
 
 
-let idLocation = location.search.slice([4])
+let idLocation = location.search.slice(4)
 
 let filterById = allEvents.filter(event => event._id == idLocation)
 filterById = filterById[0]
