@@ -5,6 +5,7 @@
 body{
     background-image: url(../img/body_back.jpg);
     background-size: cover;
+    background-position: 50% 50%;
 }
 /* HEADER */
 
