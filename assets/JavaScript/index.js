@@ -24,7 +24,7 @@ const categories = Array.from(new Set(filterCategory)).forEach(doCategories)
 
 function doCategories(category) {
     contCheck.innerHTML += `<div class="form-check checks">
-                                <label class="form-check-label">
+                                <label class="form-check-label text-light">
                                     ${category}
                                 <input class="form-check-input" type="checkbox" value="${category}" id="${category}"/>
                                 </label>
@@ -69,8 +69,8 @@ function filterSearch(array,text){
 
 function dontFound(){
     cont_card.innerHTML =  `<div class="cont_df_img">
-                                <p>Event dont found</p>
-                                <img src="https://media1.giphy.com/media/lqFHf5fYMSuKcSOJph/giphy.gif?cid=ecf05e47at58j0e04euem24lav8u8srmsy9ed9flshjk8lxy&rid=giphy.gif&ct=g" alt="" id="dont_found_img">
+                                <h2 class="text-light">Event dont found</h2>
+                                <img src="https://media1.giphy.com/media/lqFHf5fYMSuKcSOJph/giphy.gif?cid=ecf05e47at58j0e04euem24lav8u8srmsy9ed9flshjk8lxy&rid=giphy.gif&ct=g" alt="" class="img-fluid" id="dont_found_img">
                             </div>`
 }
 
