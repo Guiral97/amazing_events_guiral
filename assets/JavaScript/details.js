@@ -13,10 +13,9 @@ doEventDetail(filterById)
 
 function doEventDetail(event){
     contCardDetail.innerHTML = 
-    `<div class="cont_card">
-    <div class="cont_img">
-        <img src="${event.image}" alt="${event.name}">
-    </div>
+    `<div class="cont_img">
+            <img src="${event.image}" alt="${event.name}">
+        </div>
         <article>
             <h2>${event.name}</h2>
             <p><strong>Date:</strong> ${event.date}</p>
@@ -26,8 +25,7 @@ function doEventDetail(event){
             <p><strong>Capacity:</strong> ${event.capacity}</p>
             <p><strong>Assistance:</strong> ${event.assistance}</p>
             <p><strong>Price:</strong> ${event.price}$</p> 
-        </article>
-    </div>`
+        </article>`
 }
 
 

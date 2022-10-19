@@ -70,21 +70,21 @@ function filterSearch(array,text){
 function dontFound(){
     cont_card.innerHTML =  `<div class="cont_df_img">
                                 <h2 class="text-light">Event dont found</h2>
-                                <img src="https://media1.giphy.com/media/lqFHf5fYMSuKcSOJph/giphy.gif?cid=ecf05e47at58j0e04euem24lav8u8srmsy9ed9flshjk8lxy&rid=giphy.gif&ct=g" alt="" class="img-fluid" id="dont_found_img">
+                                <img src="https://i.gifer.com/XSNt.gif" alt="" class="img-fluid" id="dont_found_img">
                             </div>`
 }
 
 
 function doEvent(event) {
-    cont_card.innerHTML += `<div class="card" style="width: 15rem; height: 24rem;">
-                                <img src="${event.image}" style="height: 30%; object-fit: cover; border-radius: 0.3rem 0.3rem 0 0 ;" alt="..." />
-                                <div class="card-body" style="height: 70%;">
-                                    <h5 class="card-title" style="height: 25%;">${event.name}</h5>
+    cont_card.innerHTML += `<div class="card" style="width: 19rem; height: 24rem;">
+                                <img src=" ${event.image}" style="height: 30%; object-fit: cover; border-radius: 0.3rem 0.3rem 0 0 ;" alt="..." />
+                                <div class="card-body back" style="height: 70%;">
+                                    <h3 class="card-title" style="height: 25%;"> ${event.name}</h3>
                                     <p class="card-text" style="height: 50%;">
                                         ${event.description}
                                     </p>
-                                    <div class="d-flex gap-4 align-items-center" style="width: 100%; height: 20%;">
-                                        <p class="p-0 m-0"><strong>Price:</strong>${event.price}$</p>
+                                    <div class="d-flex justify-content-around align-items-center" style="width: 100%; height: 20%;">
+                                        <p class="p-0 m-0"><strong>Price:</strong> ${event.price}$</p>
                                         <a href="./details.html?id=${event._id}" type="submit" class="btn px-1"  style=" background-color: #CBD6E8; color:#D00B5B;"><strong>View More</strong></a>
                                     </div>
                                 </div>

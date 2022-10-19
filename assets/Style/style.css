@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 body{
@@ -16,8 +17,9 @@ body{
 .header {
     width: 100%;
     min-height: 20vh;
-    /* background-color: #CBD6E8; */
+    background-color: #e4e4e42c;
     border-bottom: solid 2px #909599;
+    backdrop-filter: blur(0.2rem);
 }
 
 
@@ -35,6 +37,16 @@ body{
 .main {
     min-height: 70vh;
     /* background-color:  #E9F0FA */
+}
+
+.main .cont_table{
+    padding: 5% 0;
+    height: 100%
+}
+
+#cont_card .card {
+    background-color: rgba(251, 245, 245, 0.597);
+    backdrop-filter: blur(0.5rem)
 }
 
 .cont_inputs{
@@ -62,16 +74,14 @@ body{
 }
 
 .main_details .cont_card {
-    border: solid 2px #909599;
+    background-color: rgba(251, 245, 245, 0.597);
+    backdrop-filter: blur(0.5rem);  
     border-radius: 1rem;
     display: flex;
     flex-wrap: wrap;
     min-height: 25rem;
     justify-content: center;
     align-content: center;
-    background-color: #CBD6E8;
-    
-    
 }
 
 .main_details .cont_card .cont_img {
@@ -113,8 +123,9 @@ body{
     justify-content: space-between;
     width: 100%;
     min-height: 10vh;
-    /* background-color: #CBD6E8; */
+    background-color: #ffffff39;
     border-top: solid 2px #909599;
+    backdrop-filter: blur(0.1rem);
 }
 
 
