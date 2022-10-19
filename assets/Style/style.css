@@ -5,7 +5,7 @@
 
 body{
     background-image: url(../img/body_back.jpg);
-    background-position: 50% 50%; 
+    /* background-position: 50% 50%;  */
 }
 /* HEADER */
 
@@ -45,8 +45,23 @@ body{
 
 #cont_card .card {
     background-color: rgba(251, 245, 245, 0.597);
-    backdrop-filter: blur(0.5rem)
+    backdrop-filter: blur(0.5rem);
+    width: 19rem;
+    height: 24rem;
 }
+
+#cont_card .card img {
+    height: 30%;
+    object-fit: cover;
+    border-radius: 0.3rem 0.3rem 0 0 ;
+}
+
+#cont_card .card .card_text{
+    height: 70%;
+    padding: 1rem;
+}
+
+
 
 .cont_inputs{
     min-height: 10vh;
@@ -102,7 +117,7 @@ body{
 .cont_df_img {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 20%;
 }
 
 .cont_df_img h2 {

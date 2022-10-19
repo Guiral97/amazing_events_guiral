@@ -76,9 +76,9 @@ function dontFound(){
 
 
 function doEvent(event) {
-    cont_card.innerHTML += `<div class="card" style="width: 19rem; height: 24rem;">
-                                <img src=" ${event.image}" style="height: 30%; object-fit: cover; border-radius: 0.3rem 0.3rem 0 0 ;" alt="..." />
-                                <div class="card-body back" style="height: 70%;">
+    cont_card.innerHTML += `<div class="card">
+                                <img src=" ${event.image}" alt="..." />
+                                <div class="card_text">
                                     <h3 class="card-title" style="height: 25%;"> ${event.name}</h3>
                                     <p class="card-text" style="height: 50%;">
                                         ${event.description}
