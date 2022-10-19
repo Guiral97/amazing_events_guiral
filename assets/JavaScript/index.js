@@ -33,14 +33,14 @@ function doCategories(category) {
 
 // GET INPUT CHECK ARRAY N EVENT
 let checkBoxes = Array.from(document.querySelectorAll('.form-check-input'))
-checkBoxes.forEach(check => check.addEventListener('click', Checks))
+checkBoxes.forEach(check => check.addEventListener('click', crossFilter))
 
-inputSearch.addEventListener('input', Checks)
+inputSearch.addEventListener('input', crossFilter)
 
 
 
 // CROSS FILTER N PUSH HTML
-function Checks(){
+function crossFilter(){
     let filteredCategory = checkEvents(allCards)
     let filteredSearch = filterSearch(filteredCategory, inputSearch.value)
     if(filteredSearch.length !== 0){
