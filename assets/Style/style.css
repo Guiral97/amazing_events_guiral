@@ -5,8 +5,7 @@
 
 body{
     background-image: url(../img/body_back.jpg);
-    background-size: cover;
-    background-position: 50% 50%;
+    background-position: 50% 50%; 
 }
 /* HEADER */
 
@@ -54,7 +53,7 @@ body{
 }
 
 .cont_inputs #cont_check{
-    justify-content: space-evenly;
+    justify-content: stretch;
 }
 
 .empty{
@@ -152,6 +151,12 @@ body{
 }
 
 /* MEDIAS */
+@media screen and (max-width: 1289px){
+    .cont_inputs{
+        gap: 1rem!important;
+        padding: 1rem!important;
+    }
+}
 
 @media screen and (max-width: 1092px) {
     .main_details .cont_card{
@@ -197,5 +202,6 @@ body{
 @media screen and (max-width: 353px){
     .cont_inputs #cont_check{
         flex-direction: column;
+        gap: 1rem!important;
     }
 }
