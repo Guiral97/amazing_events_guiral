@@ -33,14 +33,14 @@ function doCategories(category) {
 
 // GET INPUT CHECK ARRAY N EVENT
 let checkBoxes = Array.from(document.querySelectorAll('.form-check-input'))
-checkBoxes.forEach(check => check.addEventListener('click', Checks))
+checkBoxes.forEach(check => check.addEventListener('click', crossFilter))
 
-inputSearch.addEventListener('input', Checks)
+inputSearch.addEventListener('input', crossFilter)
 
 
 
 // CROSS FILTER N PUSH HTML
-function Checks(){
+function crossFilter(){
     let filteredCategory = checkEvents(allCards)
     let filteredSearch = filterSearch(filteredCategory, inputSearch.value)
     if(filteredSearch.length !== 0){
@@ -76,9 +76,9 @@ function dontFound(){
 
 
 function doEvent(event) {
-    cont_card.innerHTML += `<div class="card" style="width: 19rem; height: 24rem;">
-                                <img src=" ${event.image}" style="height: 30%; object-fit: cover; border-radius: 0.3rem 0.3rem 0 0 ;" alt="..." />
-                                <div class="card-body back" style="height: 70%;">
+    cont_card.innerHTML += `<div class="card">
+                                <img src=" ${event.image}" alt="..." />
+                                <div class="card_text">
                                     <h3 class="card-title" style="height: 25%;"> ${event.name}</h3>
                                     <p class="card-text" style="height: 50%;">
                                         ${event.description}
