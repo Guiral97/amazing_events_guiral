@@ -8,7 +8,7 @@ const inputSearch = document.getElementById('search_fild')
 const todayDate = events.currentDate
 
 // PAGE FILTER
-const card = [...events.events].map(events => events)
+const card = events.events
 const homeEvents = card.filter(() => title.text.includes('Home'))
 const pastEvents = card.filter(() => title.text.includes('Past')).filter((card) => card.date < todayDate)
 const futureEvents = card.filter(() => title.text.includes('Upcoming')).filter((card) => card.date > todayDate)
@@ -19,8 +19,7 @@ let allCards = [...homeEvents, ...futureEvents, ...pastEvents]
 allCards.forEach(doEvent)
 
 // GET N FILTER CATEGORIES
-const filterCategory = card.map((event) => event.category)
-const categories = Array.from(new Set(filterCategory)).forEach(doCategories) 
+const filterCategory =  new Set(card.map((event) => event.category)).forEach(doCategories) 
 
 function doCategories(category) {
     contCheck.innerHTML += `<div class="form-check checks">

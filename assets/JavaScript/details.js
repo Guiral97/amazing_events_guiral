@@ -6,8 +6,7 @@ let allEvents = events.events
 
 let idLocation = location.search.slice(4)
 
-let filterById = allEvents.filter(event => event._id == idLocation)
-filterById = filterById[0]
+let filterById = allEvents.find((event) => event._id == idLocation )
 
 doEventDetail(filterById)
 
