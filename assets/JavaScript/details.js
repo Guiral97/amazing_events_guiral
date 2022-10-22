@@ -19,23 +19,13 @@ apiEvents()
 
 
 function doEventDetail(event) {
+    let aOrS = []
     if(event.assistance !== undefined){
-        contCardDetail.innerHTML =
-        `<div class="cont_img">
-        <img src="${event.image}" alt="${event.name}">
-    </div>
-    <article>
-        <h2>${event.name}</h2>
-        <p><strong>Date:</strong> ${event.date}</p>
-        <p><strong>Description:</strong> ${event.description}</p>
-        <p><strong>Category:</strong> ${event.category}</p>
-        <p><strong>Place:</strong> ${event.place}</p>
-        <p><strong>Capacity:</strong> ${event.capacity}</p>
-        <p><strong>Assistance:</strong> ${event.assistance}</p>
-        <p><strong>Price:</strong> ${event.price}$</p> 
-    </article>`
+        aOrS =["Assitance", event.assistance]
     }else{
-        contCardDetail.innerHTML =
+        aOrS =["Estimate", event.estimate]
+    }
+    contCardDetail.innerHTML =
         `<div class="cont_img">
         <img src="${event.image}" alt="${event.name}">
     </div>
@@ -46,9 +36,7 @@ function doEventDetail(event) {
         <p><strong>Category:</strong> ${event.category}</p>
         <p><strong>Place:</strong> ${event.place}</p>
         <p><strong>Capacity:</strong> ${event.capacity}</p>
-        <p><strong>Estimate:</strong> ${event.estimate}</p>
+        <p><strong>${aOrS[0]}:</strong> ${aOrS[1]}</p>
         <p><strong>Price:</strong> ${event.price}$</p> 
     </article>`
-    }
-    
 }
