@@ -6,8 +6,7 @@ const inputSearch = document.getElementById('search_fild')
 
 async function apiEvents(){
     try{
-        var api = await fetch('https://amazing-events.herokuapp.com/api/events')
-        api = await api.json()
+        var api = await (await fetch('https://amazing-events.herokuapp.com/api/events')).json()
     }
     catch(error){
         console.log(error)
