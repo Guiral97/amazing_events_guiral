@@ -1,18 +1,25 @@
 const contCardDetail = document.getElementById('cont_card_details')
 
 
-let allEvents = events.events
+async function apiEvents(){
+    try{
+        var api = await fetch('https://amazing-events.herokuapp.com/api/events')
+        api = await api.json()
+    }
+    catch(error){
+        console.log(error)
+    }
+    let allEvents = api.events
 
+    let idLocation = location.search.slice(4)
 
-let idLocation = location.search.slice(4)
+    let filterById = allEvents.find((event) => event._id == idLocation)
 
-let filterById = allEvents.find((event) => event._id == idLocation )
+    doEventDetail(filterById)
 
-doEventDetail(filterById)
-
-function doEventDetail(event){
-    contCardDetail.innerHTML = 
-    `<div class="cont_img">
+    function doEventDetail(event) {
+        contCardDetail.innerHTML =
+            `<div class="cont_img">
             <img src="${event.image}" alt="${event.name}">
         </div>
         <article>
@@ -25,8 +32,6 @@ function doEventDetail(event){
             <p><strong>Assistance:</strong> ${event.assistance}</p>
             <p><strong>Price:</strong> ${event.price}$</p> 
         </article>`
+    }
 }
-
-
-
-
+apiEvents()
