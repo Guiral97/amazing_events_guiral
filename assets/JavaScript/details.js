@@ -10,33 +10,32 @@ async function apiEvents(){
     }
     let allEvents = api.events
     let idLocation = location.search.slice(4)
-    let filterById = allEvents.find((event) => event._id == idLocation)
+    let filterById = allEvents.find(event => event._id == idLocation)
 
     doEventDetail(filterById)
 
 }
 apiEvents()
 
-
 function doEventDetail(event) {
-    let aOrS = []
+    let aOrE = []
     if(event.assistance !== undefined){
-        aOrS =["Assitance", event.assistance]
+        aOrE =["Assitance", event.assistance]
     }else{
-        aOrS =["Estimate", event.estimate]
+        aOrE =["Estimate", event.estimate]
     }
     contCardDetail.innerHTML =
         `<div class="cont_img">
-        <img src="${event.image}" alt="${event.name}">
-    </div>
-    <article>
-        <h2>${event.name}</h2>
-        <p><strong>Date:</strong> ${event.date}</p>
-        <p><strong>Description:</strong> ${event.description}</p>
-        <p><strong>Category:</strong> ${event.category}</p>
-        <p><strong>Place:</strong> ${event.place}</p>
-        <p><strong>Capacity:</strong> ${event.capacity}</p>
-        <p><strong>${aOrS[0]}:</strong> ${aOrS[1]}</p>
-        <p><strong>Price:</strong> ${event.price}$</p> 
-    </article>`
+            <img src="${event.image}" alt="${event.name}">
+        </div>
+        <article>
+            <h2>${event.name}</h2>
+            <p><strong>Date:</strong> ${event.date}</p>
+            <p><strong>Description:</strong> ${event.description}</p>
+            <p><strong>Category:</strong> ${event.category}</p>
+            <p><strong>Place:</strong> ${event.place}</p>
+            <p><strong>Capacity:</strong> ${event.capacity}</p>
+            <p><strong>${aOrE[0]}:</strong> ${aOrE[1]}</p>
+            <p><strong>Price:</strong> ${event.price}$</p> 
+        </article>`
 }
