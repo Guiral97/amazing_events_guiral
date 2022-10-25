@@ -3,7 +3,7 @@ const contCardDetail = document.getElementById('cont_card_details')
 
 async function apiEvents(){
     try{
-        var api = await (await fetch('https://amazing-events.herokuapp.com/api/events')).json()
+        var api = await (await fetch('https://mind-hub.up.railway.app/amazing')).json()
     }
     catch(error){
         console.log(error)
@@ -17,7 +17,8 @@ async function apiEvents(){
 }
 apiEvents()
 
-function doEventDetail(event) {
+function doEventDetail(event){
+    date = new Date(event.date).toDateString();
     let aOrE = []
     if(event.assistance !== undefined){
         aOrE =["Assitance", event.assistance]
@@ -30,7 +31,7 @@ function doEventDetail(event) {
         </div>
         <article>
             <h2>${event.name}</h2>
-            <p><strong>Date:</strong> ${event.date}</p>
+            <p><strong>Date:</strong> ${date}</p>
             <p><strong>Description:</strong> ${event.description}</p>
             <p><strong>Category:</strong> ${event.category}</p>
             <p><strong>Place:</strong> ${event.place}</p>

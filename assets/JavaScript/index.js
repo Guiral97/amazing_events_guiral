@@ -13,7 +13,7 @@ async function apiEvents(){
     }
         const todayDate = api.currentDate
         const card = api.events
-
+        
         // PAGE FILTER
         const homeEvents = card.filter(() => title.text.includes('Home'))
         const pastEvents = card.filter(() => title.text.includes('Past')).filter(card => card.date < todayDate)
