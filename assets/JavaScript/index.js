@@ -6,12 +6,12 @@ const inputSearch = document.getElementById('search_fild')
 
 async function apiEvents(){
     try{
-        var api = await (await fetch('https://amazing-events.herokuapp.com/api/events')).json()
+        var api = await (await fetch('https://mh-amazing.herokuapp.com/amazing')).json()
     }
     catch(error){
         console.log(error)
     }
-        const todayDate = api.currentDate
+        const todayDate = api.date
         const card = api.events
         
         // PAGE FILTER
@@ -90,7 +90,7 @@ function doEvent(event) {
                                     </p>
                                     <div class="d-flex justify-content-around align-items-center" style="width: 100%; height: 20%;">
                                         <p class="p-0 m-0"><strong>Price:</strong> ${event.price}$</p>
-                                        <a href="./details.html?id=${event._id}" type="submit" class="btn px-1"  style=" background-color: #CBD6E8; color:#D00B5B;"><strong>View More</strong></a>
+                                        <a href="./details.html?id=${event.id}" type="submit" class="btn px-1"  style=" background-color: #CBD6E8; color:#D00B5B;"><strong>View More</strong></a>
                                     </div>
                                 </div>
                             </div>`

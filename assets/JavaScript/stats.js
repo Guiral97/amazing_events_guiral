@@ -4,7 +4,7 @@ const table3 = document.getElementById('table3')
 
 async function apiEvents(){
     try{
-        var api = await (await fetch('https://amazing-events.herokuapp.com/api/events')).json()
+        var api = await (await fetch('https://mh-amazing.herokuapp.com/amazing')).json()
     }
     catch(error){
         console.log(error)
@@ -13,7 +13,6 @@ async function apiEvents(){
     let pastEvents = api.events.filter(event => event.assistance)
     let upcomingEvents = api.events.filter(event => event.estimate)
 
-    console.log(upcomingEvents);
 
     allEvents.map(event => {
         event.percentageAssistance = 100 * event.assistance / event.capacity
@@ -39,15 +38,11 @@ async function apiEvents(){
     let maxPercAssi = percAssisEvent[percAssisEvent.length-1]
 
 
-    let filterCategory = new Set(pastEvents.map(event => event.category))
-    filterCategory = [...filterCategory]
-    console.log(filterCategory);
 
-    
-    let dateCategory = [...new Set (allEvents.map(event => event.category))]
+    let allCategory = [...new Set (allEvents.map(event => event.category))]
     let upcomingCategory = [...new Set (upcomingEvents.map(event => event.category))]
 
-    dateCategory.forEach(element => {
+    allCategory.forEach(element => {
         let capacity = 0
         let assistance = 0
         let revenues = 0
@@ -85,8 +80,8 @@ async function apiEvents(){
                         });
                         
         table1.innerHTML += `<tr>
-                                <td>${maxPercAssi.name}: ${maxPercAssi.percentageAssistance}%</td>
-                                <td>${minPercAssi.name}: ${minPercAssi.percentageAssistance}%</td>
+                                <td>${maxPercAssi.name}: ${Math.round(maxPercAssi.percentageAssistance)}%</td>
+                                <td>${minPercAssi.name}: ${Math.round(minPercAssi.percentageAssistance)}%</td>
                                 <td>${maxCapEvent.name}: ${parseInt(maxCapEvent.capacity).toLocaleString('de-DE')}</td>
                             </tr>`
 }
