@@ -35,12 +35,18 @@ body{
 
 .main {
     min-height: 70vh;
-    /* background-color:  #E9F0FA */
 }
 
 .main .cont_table{
     padding: 5% 0;
     height: 100%
+}
+
+.main .cont_table .table{
+    background-color: rgba(251, 245, 245, 0.762);
+    backdrop-filter: blur(0.5rem);
+    width: 60%;
+    border: solid 1px black;
 }
 
 #cont_card .card {
@@ -60,8 +66,6 @@ body{
     height: 70%;
     padding: 1rem;
 }
-
-
 
 .cont_inputs{
     min-height: 10vh;
@@ -218,6 +222,9 @@ body{
 }
 
 @media screen and (max-width: 353px){
+    .main .cont_table .table{
+        font-size: small;
+    }
     .cont_inputs #cont_check{
         flex-direction: column;
         gap: 1rem!important;
