@@ -3,14 +3,14 @@ const contCardDetail = document.getElementById('cont_card_details')
 
 async function apiEvents(){
     try{
-        var api = await (await fetch('https://mh-amazing.herokuapp.com/amazing')).json()
+        var api = await (await fetch('https://63bec0a6f5cfc0949b601cc9.mockapi.io/mindhub/amazing-events')).json()
     }
     catch(error){
         console.log(error)
     }
-    let allEvents = api.events
+    let allEvents = api
     let idLocation = location.search.slice(4)
-    let filterById = allEvents.find(event => event.id == idLocation)
+    let filterById = allEvents.find(event => event._id == idLocation)
 
     doEventDetail(filterById)
 

@@ -4,14 +4,14 @@ const table3 = document.getElementById('table3')
 
 async function apiEvents(){
     try{
-        var api = await (await fetch('https://mh-amazing.herokuapp.com/amazing')).json()
+        var api = await (await fetch('https://63bec0a6f5cfc0949b601cc9.mockapi.io/mindhub/amazing-events')).json()
     }
     catch(error){
         console.log(error)
     }
-    let allEvents = api.events
-    let pastEvents = api.events.filter(event => event.assistance)
-    let upcomingEvents = api.events.filter(event => event.estimate)
+    let allEvents = api
+    let pastEvents = allEvents.filter(event => event.assistance)
+    let upcomingEvents = allEvents.filter(event => event.estimate)
 
 
     allEvents.map(event => {

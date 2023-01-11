@@ -156,7 +156,7 @@ body{
 }
 
 .footer .text{
-    color: white;
+    color: white; 
     padding-right: 1rem;
     width: 33%;
 }
@@ -169,6 +169,20 @@ body{
     width: 4rem;
 }
 
+#img-header{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#img-header:hover{
+    scale: 0.98;
+}
+
+#link-foot{
+    text-decoration: none;
+    color: white;
+}
 /* MEDIAS */
 @media screen and (max-width: 1289px){
     .cont_inputs{
